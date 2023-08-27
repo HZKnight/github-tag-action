@@ -168,6 +168,7 @@ export default async function main() {
       ? `pre${bump}`
       : bump || defaultBump;
     core.setOutput('release_type', releaseType);
+    core.setOutput('isPrerelease', isPrerelease);
 
     const incrementedVersion = inc(previousVersion, releaseType, identifier);
 
